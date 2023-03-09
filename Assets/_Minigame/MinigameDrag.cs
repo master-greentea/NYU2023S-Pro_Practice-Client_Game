@@ -19,7 +19,7 @@ public class MinigameDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
 
     private void Update()
     {
-        if (MinigameManager.Instance.isGameEnded)
+        if (MinigameManager.Instance.isGameEnded || !MinigameManager.Instance.isGameStarted)
         {
             _image.color = Color.gray;
             transform.localPosition = _startPos;
@@ -30,19 +30,19 @@ public class MinigameDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
 
     public void OnBeginDrag(PointerEventData ctx)
     {
-        if (MinigameManager.Instance.isGameEnded) return;
+        if (MinigameManager.Instance.isGameEnded || !MinigameManager.Instance.isGameStarted) return;
         _image.raycastTarget = false;
     }
 
     public void OnDrag(PointerEventData ctx)
     {
-        if (MinigameManager.Instance.isGameEnded) return;
+        if (MinigameManager.Instance.isGameEnded || !MinigameManager.Instance.isGameStarted) return;
         transform.position = ctx.position;
     }
 
     public void OnEndDrag(PointerEventData ctx)
     {
-        if (MinigameManager.Instance.isGameEnded) return;
+        if (MinigameManager.Instance.isGameEnded || !MinigameManager.Instance.isGameStarted) return;
         transform.localPosition = _startPos;
         _image.raycastTarget = true;
     }

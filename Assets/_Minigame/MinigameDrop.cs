@@ -9,6 +9,7 @@ public class MinigameDrop : MonoBehaviour, IDropHandler
 {
     [SerializeField] private GameObject feedbackTextPrefab;
     [SerializeField] private Slider healthSlider;
+    [SerializeField] private Image fill;
     private TextMeshProUGUI feedbackText;
     private Image _image;
     
@@ -19,7 +20,7 @@ public class MinigameDrop : MonoBehaviour, IDropHandler
 
     public void OnDrop(PointerEventData ctx)
     {
-        if (MinigameManager.Instance.isGameEnded) return;
+        if (MinigameManager.Instance.isGameEnded || !MinigameManager.Instance.isGameStarted) return;
         MinigameDrag item = ctx.pointerDrag.GetComponent<MinigameDrag>();
         Feedback(item.isGoodItem);
     }
@@ -37,7 +38,13 @@ public class MinigameDrop : MonoBehaviour, IDropHandler
         feedbackText.text = isPositive ? "Good!" : "Bad!";
         Destroy(feedbackObject, 1f);
         // show health bar
-        if (!isPositive) healthSlider.value--;
+        if (healthSlider.value == 3 && isPositive)
+        {
+            fill.color = Color.green;
+            MinigameManager.Instance.EndGame(true);
+            return;
+        }
+        healthSlider.value += isPositive ? 1 : -1;
         if (healthSlider.value == 0) MinigameManager.Instance.EndGame(false);
     }
 
@@ -47,7 +54,7 @@ public class MinigameDrop : MonoBehaviour, IDropHandler
         var timer = 0f;
         while (timer < .5f)
         {
-            _image.color = Color.Lerp(_image.color, new Color(31/255, 31/255, 31/255), timer / .5f);
+            _image.color = Color.Lerp(_image.color, new Color(31f/255f, 31f/255f, 31f/255f), timer / .5f);
             timer += Time.deltaTime;
             yield return null;
         }

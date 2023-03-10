@@ -7,18 +7,21 @@ using UnityEngine.UI;
 public class DragPlants : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
     RectTransform recTransform;
-    [SerializeField] Canvas myCanvas;
     CanvasGroup canvasGroup;
 
     [SerializeField] GameObject myItem;
     [SerializeField] GameObject bigPlant;
-    [SerializeField] GridLayoutGroup grid;
+    GridLayoutGroup grid;
 
     Vector3 previousPos;
     private void Awake()
     {
         recTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
+    }
+    private void Start()
+    {
+        grid = transform.parent.GetComponent<GridLayoutGroup>();
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -33,7 +36,7 @@ public class DragPlants : MonoBehaviour, IPointerDownHandler, IBeginDragHandler,
 
     public void OnDrag(PointerEventData eventData)
     {
-        recTransform.anchoredPosition += eventData.delta/ myCanvas.scaleFactor;
+        recTransform.anchoredPosition += eventData.delta;
     }
 
     public void OnEndDrag(PointerEventData eventData)

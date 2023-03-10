@@ -10,17 +10,25 @@ public class PlaceArea : MonoBehaviour, IDropHandler
     {
         if (eventData.pointerDrag != null){
 
-            Debug.Log(eventData.pointerDrag.tag);
             if (eventData.pointerDrag.tag == "Fertilizer" && havePlant){
                 Destroy(eventData.pointerDrag.gameObject);
             }
-            else if(eventData.pointerDrag.tag != "Fertilizer" && !havePlant)
+
+            if(eventData.pointerDrag.tag == "Plants" && !havePlant)
             {
                 RectTransform drager = eventData.pointerDrag.GetComponent<RectTransform>();
                 drager.SetParent(transform);
                 drager.localPosition = Vector3.zero;
 
                 havePlant = true;
+            }
+
+            if (eventData.pointerDrag.tag == "Shovel" && havePlant)
+            {
+                foreach (Transform item in transform)
+                {
+                    Destroy(item.gameObject);
+                }
             }
            
         }

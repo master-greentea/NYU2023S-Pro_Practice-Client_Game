@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
@@ -12,12 +13,9 @@ public class MenuManager : MonoBehaviour
     [SerializeField] DragPlants plantItem;
     [SerializeField] DragPlants fertilizer;
 
-    [SerializeField] float presentMoney = 1000f;
-    [SerializeField] TMP_Text myMoney;
-
     private void Start()
     {
-        myMoney.text = presentMoney.ToString();
+        // myMoney.text = presentMoney.ToString();
     }
 
     public void OpenStore()
@@ -35,6 +33,11 @@ public class MenuManager : MonoBehaviour
         StartCoroutine(MoveToTargetPos(targetPos));
     }
 
+    public void BackToClinic()
+    {
+        SceneManager.LoadScene("Clinic");
+    }
+
     IEnumerator MoveToTargetPos(Vector3 targetpos)
     {
         while (movableBg.localPosition != targetpos)
@@ -44,12 +47,18 @@ public class MenuManager : MonoBehaviour
         }
     }
 
-    public void BuyItem(int ID, float price)
+    public void BuyItem(int ID, int price)
     {
         if (ID == 0) Instantiate(plantItem, inventoryList);
         if (ID == 1) Instantiate(fertilizer, inventoryList);
 
-        presentMoney -= price;
-        myMoney.text = presentMoney.ToString();
+        // presentMoney -= price;
+        if (GlobalGameManager.greenPoints < price)
+        {
+            GlobalGameManager.Instance.warning.text = "<size=70>Not enough Green Points!";
+            StartCoroutine(GlobalGameManager.Instance.ClearWarning());
+            return;
+        }
+        GlobalGameManager.UseGreenPoints(price);
     }
 }

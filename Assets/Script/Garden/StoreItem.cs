@@ -5,7 +5,7 @@ using TMPro;
 
 public class StoreItem : MonoBehaviour
 {
-    [SerializeField] float price;
+    [SerializeField] int price;
     [SerializeField] int itemId;
     [SerializeField] TMP_Text myText;
 

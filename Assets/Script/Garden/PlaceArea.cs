@@ -28,6 +28,8 @@ public class PlaceArea : MonoBehaviour, IDropHandler
                 foreach (Transform item in transform)
                 {
                     Destroy(item.gameObject);
+                    GlobalGameManager.AddEnergy(20);
+                    havePlant = false;
                 }
             }
            

@@ -7,27 +7,16 @@
     <list default="true" id="1d7631e2-9f3a-4d4f-85c4-5b2cb891b22f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.J&amp;J Client Game - Clean Gardens Prototype/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.J&amp;J Client Game - Clean Gardens Prototype/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Fonts/Blues Smile SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/Blues Smile SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Minigame.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Minigame/FactSheetFadeIn.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Minigame/FactSheetFadeIn.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Minigame/FactsCanvas.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Minigame/FactsCanvas.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Minigame/FeedbackText.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Minigame/FeedbackText.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Minigame/MinigameDrag.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Minigame/MinigameDrag.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Minigame/MinigameDrop.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Minigame/MinigameDrop.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Minigame/MinigameFeedbackText.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Minigame/MinigameFeedbackText.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Minigame/MinigameFeedbackText.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Minigame/MinigameFeedbackText.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Minigame/MinigameManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Minigame/MinigameManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Clinic.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Clinic.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Garden.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Garden.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Minigame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Minigame.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Garden/MenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Garden/MenuManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Garden/PlaceArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Garden/PlaceArea.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Garden/StoreItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Garden/StoreItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/GlobalCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GlobalCanvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/GlobalGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GlobalGameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +90,7 @@
       <updated>1678334946784</updated>
       <workItem from="1678334963180" duration="6214000" />
       <workItem from="1678381659125" duration="6971000" />
+      <workItem from="1678422323155" duration="2902000" />
     </task>
     <servers />
   </component>

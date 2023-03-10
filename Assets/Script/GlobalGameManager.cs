@@ -37,6 +37,12 @@ public class GlobalGameManager : MonoBehaviour
         if (energy <= 0) energy = 0;
     }
 
+    public static void AddEnergy(int amount)
+    {
+        energy += amount;
+        if (energy >= 100) energy = 100;
+    }
+
     public static void UseGreenPoints(int amount)
     {
         greenPoints -= amount;
